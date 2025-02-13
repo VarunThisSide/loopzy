@@ -9,7 +9,7 @@ interface VideoFeedProps {
 
 export default function VideoFeed({ videos }: VideoFeedProps) {
 
-  const { data: session, status } = useSession();
+  const { data: session} = useSession();
   console.log(session);
 
   return (

@@ -22,7 +22,7 @@ export default function Home() {
     fetchVideos()
     console.log(videos);
     
-  },[])
+  },[videos])
   
 
   return (
