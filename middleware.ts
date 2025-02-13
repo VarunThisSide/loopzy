@@ -12,11 +12,11 @@ export default withAuth(
                 const {pathname}=req.nextUrl
             
                 //allowing auth related routes
-                if(pathname.startsWith("/api/auth") ||pathname == "/login" || pathname == "register"){
+                if(pathname.startsWith("/api/auth") ||pathname == "/login" || pathname == "/register"){
                     return true
                 }
                 //public
-                if(pathname == "/" || pathname.startsWith("api/videos")){
+                if(pathname == "/" || pathname.startsWith("api/videos")  || pathname == "/logo.svg" || pathname == "/login-to-watch.svg" || pathname == "/no-videos.svg"){
                     return true
                 }
 

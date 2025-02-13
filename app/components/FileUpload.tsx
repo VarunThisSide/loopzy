@@ -42,7 +42,7 @@ export default function FileUpload({onSuccess,onProgress,fileType="image"} : Fil
 
     const validateFile  = (file : File) => {
         if(fileType === "video"){
-            if(file.type.startsWith("video/")){
+            if(!file.type.startsWith("video/")){
                 setError("Please upload a video file");
                 return false;
             }
@@ -63,7 +63,7 @@ export default function FileUpload({onSuccess,onProgress,fileType="image"} : Fil
                 return false;
             }
         }
-        return false
+        return true;
     }
 
     return (
